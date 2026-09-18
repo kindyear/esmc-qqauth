@@ -29,7 +29,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build and run tests
-        run: ./gradlew --no-daemon clean check
+        run: ./gradlew --no-daemon clean build
 
       - name: Upload plugin artifact
         uses: actions/upload-artifact@v4
