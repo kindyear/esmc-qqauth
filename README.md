@@ -27,6 +27,19 @@ ESMC QQ 白名单认证系统的 Paper 26.2 执行端。业务真源位于配套
 
 产物：`build/libs/ESMCQQAuth-0.3.0.jar`。
 
+## CI 与发布
+
+GitHub Actions 会在推送到 `main` 及所有面向 `main` 的 Pull Request 时，以 JDK 25 执行构建和测试，并保存可下载的 JAR 构建产物。
+
+要发布版本，先确保 `build.gradle.kts` 中的 `version` 已更新，再推送同名标签：
+
+```bash
+git tag v0.3.0
+git push origin v0.3.0
+```
+
+发布工作流会校验标签与项目版本一致，构建并测试通过后自动创建 GitHub Release，上传 `ESMCQQAuth-*.jar`。
+
 ## 安装
 
 1. 把 JAR 放入 Paper 26.2 服务端的 `plugins/`。
