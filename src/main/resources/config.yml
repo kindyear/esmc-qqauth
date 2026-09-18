@@ -1,0 +1,20 @@
+backend:
+  url: "ws://127.0.0.1:25585/qqauth"
+  bearer-token: "CHANGE_ME"
+  server-id: "esmc-java-iv"
+  reconnect-min-seconds: 2
+  reconnect-max-seconds: 60
+
+verification:
+  max-attempts: 3
+  title:
+    pending: "请完成 QQ 绑定"
+    pending-subtitle: "请在聊天栏输入 /verify <验证码>"
+    bound: "绑定成功"
+    bound-subtitle: "开始探索吧"
+    refresh-ticks: 40
+    bound-stay-ticks: 80
+  success-message: "验证成功，正在等待后端授予白名单。"
+  invalid-code-message: "验证码错误，还可尝试 {remaining} 次。"
+  attempts-exhausted-message: "验证码已连续输错 3 次并失效，请回到 QQ 重新发起绑定。"
+  restricted-message: "认证完成前只能使用 /verify <验证码>。"

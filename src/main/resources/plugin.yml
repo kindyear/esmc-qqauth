@@ -1,0 +1,15 @@
+name: ESMCQQAuth
+version: '${version}'
+main: cn.kindyear.esmc.qqauth.ESMCQQAuthPlugin
+description: ESMC QQ whitelist verification bridge
+author: kindyear
+api-version: '26.2'
+commands:
+  verify:
+    description: Verify a pending QQ whitelist challenge
+    usage: /verify <code>
+    permission: esmcqqauth.verify
+permissions:
+  esmcqqauth.verify:
+    description: Allows a player to complete a pending challenge
+    default: true
